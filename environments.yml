@@ -1,0 +1,28 @@
+name: deepantiphish            # conda env name
+channels:
+  - pytorch
+  - conda-forge
+dependencies:
+  # ── Core ────────────────────────────────────────────
+  - python =3.10
+  - pip
+  - numpy         >=1.23
+  - pandas        >=1.5
+  - scikit-learn  >=1.2
+  - scipy
+  - tqdm
+  # ── E-mail / text handling ─────────────────────────
+  - beautifulsoup4
+  - regex
+  - nltk
+  # ── Visualisation ──────────────────────────────────
+  - matplotlib
+  - seaborn
+  # ── Jupyter interface ──────────────────────────────
+  - jupyterlab
+  - notebook
+  # ── Install via pip inside the env ────────────────
+  - pip:
+      - torch==2.1.2            # CPU & Apple-silicon wheels available
+      - optuna>=3.5             # hyper-parameter search
+      - nest_asyncio            # allows asyncio in notebooks
